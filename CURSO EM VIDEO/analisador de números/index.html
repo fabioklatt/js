@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALISADOR DE NÚMEROS</title>
+    <style>
+        body {
+            background-color: rgb(76, 76, 255);
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            margin: auto;
+            height: 300px;
+            width: 400px;
+            background-color: white;
+            
+        }
+       #res {
+           overflow-y: scroll;
+           
+           height: 200px;
+           width: 180px;
+           margin-left: 110px;
+           margin-top: 30px;
+          
+       }
+
+       div#d1 {
+           padding-top: 10px;
+
+       }
+
+       
+
+       div#d2 {
+           text-align: center;
+           margin: 5px;
+       }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <main>
+         
+             <div id="d1">
+                 <label for="">Número entre 1 e 100:</label>
+                  <input type="number" id="inp1">
+                  <button type="submit" id="but" >Verificar</button>
+             </div>
+           <div id="res" style="border:solid 1px;"></div>
+           <div id="d2">
+            <button onclick="exb()">Finalizar</button>
+           </div>
+        </main>
+        <div id="diva"></div>
+    <footer>
+
+    </footer>
+
+    <script>
+        let but = document.getElementById('but')
+        but.addEventListener('click', check)
+
+        
+        let inp1 = document.getElementById('inp1').value
+        let arr = []
+        let s = 0
+       
+        
+        function check(){
+         
+         let inp1 = document.getElementById('inp1').value
+         let res = document.getElementById('res')
+         
+         arr.push(inp1)
+                  
+         res.innerHTML = arr
+         document.getElementById('inp1').value = ''
+
+         s = s + Number(inp1)
+
+        
+         /*        
+         res.innerHTML+= `Adicionado número ${inp1} <br>`
+         document.getElementById('inp1').value = ''
+         */
+        }
+
+        
+
+        function exb(){
+            
+            let diva = document.getElementById('diva')
+            diva.innerHTML = `Foram digitados ${arr.length} números<br>`
+
+            
+            diva.innerHTML += `A soma de todos é ${s}`
+        
+        }
+         
+
+        
+
+        
+        
+
+        
+         
+       
+      
+
+
+
+     
+
+
+
+    </script>
+    
+
+
+    
+</body>
+</html>

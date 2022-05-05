@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Sua Idade</title>
+    <style>
+       body {
+           background-color: rgb(110, 189, 189);
+       }
+
+       * {
+           text-align: center;
+       }
+
+       div {
+           width: 400px;
+           height: 400px;
+           background-color: white;
+           margin: auto;
+       }
+       h1{
+           color: white;
+           text-align: center;
+       }
+       #menor > img {
+           width: 200px;
+           height: 200px;
+           border-radius: 50%;
+           position: absolute;
+           margin: auto;
+           top: 150px;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           
+           
+                    
+           
+       }
+
+       #maior {
+           padding-top: 20px;
+       }
+
+       #menor {
+           padding-top: 30px;
+       }
+
+      
+
+    </style>
+</head>
+<body>
+     <h1>Verificador de Idade</h1>
+    <div id="maior">
+        <label for="nasc">Ano de Nascimento</label>
+        <input type="number" name="nasc"><br>
+        <p style="display: inline-block;">Sexo:</p>
+        <input type="radio" name="sex" id="mas" value="Homem">
+        <label for="mas">Masculino</label>
+        <input type="radio" name="sex" id="fem">
+        <label for="fem">Feminino</label>
+        <input type="radio" name="sex" id="nbi">
+        <label for="nbi">Não binárie</label>
+        <button name="but">VERIFICAR</button>
+        
+        <div id="menor">
+            <p id="res"></p>
+           
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+         let but = document.getElementsByTagName('button')[0]
+         but.addEventListener('click', check)
+        
+        function check(){
+            let nas = Number(document.getElementsByName('nasc')[0].value)
+            let res = document.getElementById('res')
+            let anoatual = 2022
+            let nasc = nas
+            let s = anoatual - nas
+
+            let mas = document.getElementById('mas').checked
+            let fem = document.getElementById('fem').checked
+            let nbi = document.getElementById('nbi').checked
+
+            let foto = document.getElementById('menor')
+
+            if (mas == true && s == 1){
+                res.innerHTML=`Menino com ${s} ano`
+                foto.innerHTML+='<img src="imagens/criancas.jpg">'
+            } else if (mas == true && s < 12) {
+                res.innerHTML=`Menino com ${s} anos`
+                foto.innerHTML+='<img src="imagens/criancas.jpg">'
+            } else if (mas == true && s < 20) {
+                res.innerHTML=`Adolescente com ${s} anos`
+                foto.innerHTML+='<img src="imagens/homem.jpg">'
+            } else if (mas == true) {
+                res.innerHTML=`Homem com ${s} anos`
+                foto.innerHTML+='<img src="imagens/homem.jpg">'
+            }
+
+
+            if (fem == true && s == 1){
+                res.innerHTML=`Menina com ${s} ano`
+                foto.innerHTML+='<img src="imagens/criancas.jpg">'
+            } else if (fem == true && s < 12){
+                res.innerHTML=`Menina com ${s} anos`
+                foto.innerHTML+='<img src="imagens/criancas.jpg">'
+            } else if (fem == true && s < 20) {
+                res.innerHTML=`Adolescente com ${s} anos`
+                foto.innerHTML+='<img src="imagens/homem.jpg">'
+            } else if (fem == true) {
+                res.innerHTML=`Mulher com ${s} anos`
+                foto.innerHTML+='<img src="imagens/mulher.jpg">'
+            }
+
+            if (nbi == true && s == 1){
+                res.innerHTML=`Criança com ${s} ano`
+                foto.innerHTML+='<img src="imagens/criancas.jpg">'
+            } else if (nbi == true && s < 12){
+                res.innerHTML=`Criança com ${s} anos`
+                foto.innerHTML+='<img src="imagens/criancas.jpg">'
+            } else if (nbi == true && s < 20) {
+                res.innerHTML=`Adolescente com ${s} anos`
+                foto.innerHTML+='<img src="imagens/adultos.jpg">'
+            } else if (nbi == true) {
+                res.innerHTML=`Adulto com ${s} anos`
+                foto.innerHTML+='<img src="imagens/adultos.jpg">'
+            }
+
+            
+            
+            
+
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+        }
+        
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>

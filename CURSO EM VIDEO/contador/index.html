@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTADOR</title>
+</head>
+<style>
+    *{
+        text-align: center;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    body {
+        background-image: linear-gradient(to right, #0CAEE8,#0CE8AA);
+    }
+
+    #s1 {
+        height: 250px;
+        width: 400px;
+        background-color: white;
+        margin: auto;
+        
+        
+    }
+
+    
+
+    #s2 {
+        height: 150px;
+        width: 400px;
+        background-color: white;
+        margin:auto;
+        margin-top: 30px;
+        
+        
+        
+    }
+
+    h1 {
+        color: white;
+        
+    }
+
+    h4 {
+        margin: 0%;
+        padding-top: 10px;
+    }
+
+
+    label, input, button {
+        margin-top: 30px;
+        
+    }
+
+    input {
+        width: 180px;
+
+    
+        
+    }
+
+    input:hover {
+        background-color: #0ce8aa6b;
+    }
+
+    button:hover {
+        background-color: #0ce8aa6b;
+    }
+
+    section {
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.507);
+    }
+
+    footer {
+        margin-top: 30px;
+        color: black;
+    }
+
+
+</style>
+<body>
+
+    <header>
+        <h1>Contador Online</h1>
+    </header>
+    <main>
+        <section id="s1">
+            <label for="" style="margin-right: 3px;">Início: </label>
+            <input type="number" name="" id="init"><br>
+            <label for="">Fim: &nbsp; &nbsp; </label>
+            <input type="number" name="" id="fimt" style="margin-right: 3px;"><br>
+            <label for="">Passo: &nbsp; </label>
+            <input type="number" name="" id="past" style="margin-right: 3px;"><br>
+             <button type="submit" id="but">CONTE!</button>
+        </section>
+        <section id="s2" style="overflow: auto;">
+            <h4>Resultado:</h4>
+              <p id="res">...</p>
+        </section>
+    </main>
+    <footer>
+        &copy;Klatt
+    </footer>
+
+    <script>
+
+        let but = document.getElementById('but')
+        but.addEventListener('click', contar)
+         
+         function contar(){
+           let init = document.getElementById('init').value
+           let ini = Number(init)
+           
+           let fimt = document.getElementById('fimt').value
+           let fim = Number(fimt)
+
+           let past = document.getElementById('past').value
+           let pas = Number(past)
+           let res = document.getElementById('res')
+
+           if (init == '' || fimt == '' || past == '' || pas <= 0 || ini == fim){
+               alert('Configuração inválida!')
+           }
+           
+           res.innerHTML=''
+
+           if (ini <= fim) {
+            for (let cont = ini; cont <= fim; cont = cont + pas){
+                     res.innerHTML+=` ${cont}`
+                     }
+             } else {
+                for (let cont = ini; cont >= fim; cont = cont - pas){
+                     res.innerHTML+=` ${cont}`
+                     }
+             }
+           
+           
+         }
+
+
+    </script>
+    
+</body>
+</html>

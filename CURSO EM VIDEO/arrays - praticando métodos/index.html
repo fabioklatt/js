@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior, menor</title>
+</head>
+<body>
+    <label for="">Informe um número:</label>
+    <input type="number" name="" id="n">
+    <button type="submit" id="but">inserir</button>
+    <div id="res1">
+       
+    </div>
+    <button id="but2">finalizar</button>
+    <div id="res2">
+     <p>resultado...</p>
+    </div>
+    <div id="res3">
+
+    </div>
+
+    <script>
+       let but = document.getElementById('but')
+
+       but.addEventListener('click', clicar)
+
+       let a = []
+       let cont = 0
+       let maior = 0
+       let soma = 0
+       
+
+       function clicar(){
+           let n = Number(document.getElementById('n').value)
+           let res1 = document.getElementById('res1')
+
+
+           a.push(n)
+           res1.innerHTML=`${a}`
+
+           
+           
+           
+           soma = soma + n
+           
+
+           
+       }
+
+
+       let but2 = document.getElementById('but2')
+       but2.addEventListener('click', fim)
+
+       function fim(){
+           let res3 = document.getElementById('res3')
+           let menor = a[0]
+
+          
+           
+           for (cont in a){
+               if (a[cont] > maior){
+                   maior = a[cont]
+               }
+               if (a[cont] < menor){
+                   menor = a[cont]
+               }
+           }
+
+           res3.innerHTML=`O maior valor é ${maior}`
+           res3.innerHTML+= `O menor valor é ${menor}`
+           res3.innerHTML+=`Soma: ${soma}`
+       }
+
+
+
+
+
+
+      
+
+
+    </script>
+    
+</body>
+</html>

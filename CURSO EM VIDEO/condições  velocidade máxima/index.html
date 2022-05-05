@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade</title>
+</head>
+<body>
+
+    <h1>Velocidade Máxima</h1>
+    <label for="informe">Informe a velocidade</label>
+    <input type="number" name="velt" id="velt">
+    <button id="button"> Verificar</button>
+    <p id="res"></p>
+
+
+    <script>
+
+        let button = document.getElementById('button')
+        button.addEventListener('click', vel)
+        
+        function vel(){
+            let velt = Number(document.getElementById('velt').value)
+            let res = document.getElementById('res')
+            res.innerHTML = `<p>Sua velocidade é <strong>${velt}km/h</strong></p>`
+            if (velt <= 60){
+                res.innerHTML += '<p>Velocidade dentro da permitida</p>'
+            } else {
+                res.innerHTML += '<p>Acima da velocidade!</p>'
+            }
+            res.innerHTML += '<p>Dirija sempre com segurança</p>'
+
+        }
+
+    </script>
+</body>
+</html>

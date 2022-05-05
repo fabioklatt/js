@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+:root {
+    --cor1: #003E61;
+    --cor2: #FF7300;
+    --cor3: #1B4470;
+    --cor4: #95A3AD;
+    --fontepadrao: 'Noto Serif', serif;   
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(to right, var(--cor1), var(--cor3));
+    font-family: var(--fontepadrao) ;
+}
+
+#cal {
+    width: 400px;
+    height: 400px;
+    background-color: var(--cor2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.664);
+
+}
+
+h2 {
+    color: var(--cor1);
+    padding-bottom: 15px;
+    
+}
+
+#tela {
+    width: 295px;
+    height: 60px;
+    border-style: none;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-spacing: 5px;
+}
+
+
+tr {
+    width: 294px;
+    height: 60px;
+}
+
+button {
+    width: 70px;
+    height: 60px;
+    border-style: none;
+    background-color: white;
+    color: var(--cor1);
+    font-size: larger;
+    font-weight: bold;
+    
+}
+
+button:hover{
+    background-color: var(--cor1);
+    color: white;
+    font-weight: bolder;
+}

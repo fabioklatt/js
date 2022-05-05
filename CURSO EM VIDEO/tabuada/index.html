@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABUADA</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+  
+
+        * {
+            text-align: center;
+            font-family: 'Noto Serif', serif;
+            
+    
+        
+            
+        }
+
+        body {
+            background-image: linear-gradient(to right, #006E1A, #003B0E);
+        }
+
+        header {
+            color: white;
+        }
+
+        main {
+            background-color: white;
+            height: 400px;
+            width: 400px;
+            margin: auto;
+            padding-top: 25px;
+            border-radius: 40px 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+
+            
+        }
+        
+        select {
+            margin: 75px;
+            width: 200px;
+            overflow: auto;
+        }
+
+        option {
+            padding: 4px;
+            
+        }
+
+        footer {
+            color: white;
+           
+        }
+      
+
+       
+    </style>
+</head>
+<body>
+
+    <header>
+       <h1>TABUADA</h1>
+    </header>
+    <main id="main">
+       <label for="numero">Número:</label> 
+       <input type="number" name="num" id="num">
+       <button id="but">GERAR TABUADA</button>
+            
+           <select id="sel" size="10">
+              <option>Digite o número acima</option>
+           </select>
+        
+       
+           
+           
+       
+
+    </main>
+    <footer>
+        <p>&copy;Fábio Klatt</p>
+    </footer>
+
+    <script>
+        
+        let but = document.getElementById('but')
+        but.addEventListener('click', check)
+
+        function check(){
+            let num = Number(document.getElementById('num').value)
+            let sel = document.getElementById('sel')
+            sel.innerHTML=''
+           
+            
+            
+            
+
+            for(cont = 1; cont <= 10 ; cont ++ ){
+              
+                 r = num * cont
+                 let item = document.createElement('option')
+                 sel.appendChild(item)
+                 item.text=`${num} X ${cont} = ${r}`
+            
+            }
+        }
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

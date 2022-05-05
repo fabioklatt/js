@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+
+    <div id="cal">
+        <h2>C A L C U L A D O R A</h2>
+        <div id="tela"></div>
+        
+        <table>
+            <tr>
+               <td><button id="9" onclick="num()" value="9">9</button></td>
+               <td><button id="8" onclick="num()" value="8">8</button></td>
+               <td><button id="7" onclick="num()" value="7">7</button></td>
+               <td><button class="but" onclick="num()" value="/">/</button></td>
+            </tr>
+            <tr>
+               <td><button class="but" onclick="num()" value="6">6</button></td>
+               <td><button class="but" onclick="num()" value="5">5</button></td>
+               <td><button class="but" onclick="num()" value="4">4</button></td>
+               <td><button class="but" onclick="num()" value="*">x</button></td>
+            </tr>
+            <tr>
+               <td><button class="but" onclick="num()" value="3">3</button></td>
+               <td><button class="but" onclick="num()" value="2">2</button></td>
+               <td><button class="but" onclick="num()" value="1">1</button></td>
+               <td><button class="but" onclick="num()" value="-">-</button></td>
+            </tr>
+            <tr>
+               <td><button class="but">CE</button></td>
+               <td><button class="but" onclick="num()" value="0">0</button></td>
+               <td><button class="but" onclick="num()">=</button></td>
+               <td><button class="but" onclick="num()" value="+">+</button></td>
+
+            </tr>
+        </table>
+
+    </div>
+
+  <script src="index.js"></script>
+    
+</body>
+</html>

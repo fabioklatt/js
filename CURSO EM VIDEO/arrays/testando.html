@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Analisando números</h1>
+    <label for="">Valor:</label>
+    <input type="number" id="inp">
+    <button type="submit" id="but">checar</button>
+
+    <div id="res">
+     
+    </div>
+
+    <script>
+        
+        let but = document.getElementById('but')
+
+        but.addEventListener('click', checar)
+        but.addEventListener('click', rep)
+
+        let arr = []
+
+        function checar(){
+            let inp = Number(document.getElementById('inp').value)
+            let res= document.getElementById('res')
+
+            
+            arr.push(inp)
+
+            contador = 0
+
+            while (contador < arr.length){
+                res.innerHTML = `Valor adicionado ${arr[contador]}`
+                
+                contador++
+                
+
+            }
+        }
+
+     
+
+        function rep(){
+            contador = 0
+            while (contador < arr.length){
+    
+                 rep = arr[contador]
+                 cont++
+                 if (arr[contador] == rep){
+                    alert(`Valores repitidos: ${arr[contador]}`)
+                 }
+            } 
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>

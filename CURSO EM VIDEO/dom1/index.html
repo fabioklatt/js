@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao dom</title>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="msg">clique em mim</div>
+
+    <script>
+       let p0 = document.getElementsByTagName('p')[0]
+       let p1 = document.getElementsByTagName('p')[1]
+       p0.innerText = 'strike a pose'
+       p1.style.background = 'blue'
+       document.write(p1.innerText + '<br>')
+       document.write(p1.innerHTML)
+
+       let div = document.getElementById('msg')
+       div.style.background = 'yellow'
+       div.innerHTML = 'não se dorme na europaaa'
+       document.querySelector('div#msg').style.color = 'red'
+
+
+    </script>
+    
+</body>
+</html>

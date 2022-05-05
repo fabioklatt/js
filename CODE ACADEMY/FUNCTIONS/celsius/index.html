@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>conversor de temperatura</h1>
+    <label for="informe">Informe em celsius:</label>
+     <input type="number" id="c" >
+     <button id="but" onclick="conv()">converter</button>
+     <div id="div">
+         resultado
+     </div>
+     <script>
+
+
+         function conv() {
+            let c = Number(document.getElementById('c').value)
+            let but = document.getElementById('but')
+            let div = document.getElementById('div')
+            div.innerHTML = f(c)
+         }
+
+        let f = c => fah = 1.8 * c + 32
+        
+
+              
+                    
+      
+
+
+     </script>
+    
+</body>
+</html>

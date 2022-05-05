@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="exb()">
+
+    <h1>Hora do Dia</h1>
+    <div id="ima">
+        <p>Agora são 10h13</p>
+        <img src="imagens/manha.jpg">        
+    </div>
+    <p style="color: white; text-align: center;">&copy;Klatt</p>
+
+    <script>
+
+         function exb (){
+                   
+            let data = new Date()
+            let hora = data.getHours()
+            let min = data.getMinutes()
+           
+            let div = document.getElementById('ima')
+            let fundo = document.body
+            
+
+            if (hora == 1){
+                fundo.style.background='#134000'
+                div.innerHTML=`<p>Bom dia!</p>`
+                
+                if (min < 10){
+                    div.innerHTML+=`<p>Agora é ${hora}h0${min}min</p>`  
+                } else{
+                    div.innerHTML+=`<p>Agora é ${hora}h${min}min</p>` 
+                }
+
+                div.innerHTML+=`<img src="imagens/manha.jpg">`
+               
+            } else if (hora < 12){
+                fundo.style.background='#134000'
+                div.innerHTML=`<p>Bom dia!</p>`
+                
+                if (min < 10){
+                    div.innerHTML+=`<p>Agora são ${hora}h0${min}min</p>`  
+                } else{
+                    div.innerHTML+=`<p>Agora são ${hora}h${min}min</p>` 
+                }
+
+                div.innerHTML+='<img src="imagens/manha.jpg">'
+            } else if (hora < 18){
+                fundo.style.background='#487395' 
+
+                div.innerHTML=`<p>Boa tarde!</p>`
+                
+                if (min < 10){
+                    div.innerHTML+=`<p>Agora são ${hora}h0${min}min</p>`  
+                } else{
+                    div.innerHTML+=`<p>Agora são ${hora}h${min}min</p>` 
+                }
+                
+                div.innerHTML+='<img src="imagens/tarde.jpg">'
+            } else {
+                fundo.style.background='#061616' 
+
+                div.innerHTML=`<p>Boa noite!</p>`
+
+                if (min < 10){
+                    div.innerHTML+=`<p>Agora são ${hora}h0${min}min</p>`  
+                } else{
+                    div.innerHTML+=`<p>Agora são ${hora}h${min}min</p>` 
+                }
+                div.innerHTML+='<img src="imagens/noite.jpg">'
+            }
+            
+            
+
+            
+            
+
+            
+            
+            
+            
+        
+            
+            
+            
+        }
+
+
+    </script>
+    
+</body>
+</html>
