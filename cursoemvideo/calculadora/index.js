@@ -5,6 +5,7 @@ const igual = document.querySelector('.igual')
 
 function insert(valor){
   result.innerHTML += valor
+  
 }
 
 function clean(){
