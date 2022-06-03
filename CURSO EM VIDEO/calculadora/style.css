@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 :root {
-    --cor1: #003E61;
-    --cor2: #FF7300;
-    --cor3: #1B4470;
-    --cor4: #95A3AD;
+    --cor1: #023535;
+    --cor2: black;
+    --cor3: #015958;
+    --cor4: #008F8C;
     --fontepadrao: 'Noto Serif', serif;   
 }
 
@@ -16,13 +16,13 @@
 }
 
 body {
-    background-image: linear-gradient(to right, var(--cor1), var(--cor3));
+    background-image: linear-gradient(to right, var(--cor3), var(--cor4));
     font-family: var(--fontepadrao) ;
 }
 
 #cal {
-    width: 400px;
-    height: 400px;
+    width: 315px;
+    height: 450px;
     background-color: var(--cor2);
     margin-left: auto;
     margin-right: auto;
@@ -35,26 +35,32 @@ body {
 }
 
 h2 {
-    color: var(--cor1);
+    color: var(--cor4);
     padding-bottom: 15px;
     
 }
 
-#tela {
+.result {
     width: 295px;
-    height: 60px;
+    height: 110px;
     border-style: none;
-    background-color: white;
+    background-color: var(--cor2);
     margin-left: auto;
     margin-right: auto;
+    word-wrap: break-word;
+    color: white;
+    font-size: 30px;
+   
 }
 
 table {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    border-spacing: 5px;
+    border-spacing: 4px;
 }
+
+
 
 
 tr {
@@ -66,8 +72,8 @@ button {
     width: 70px;
     height: 60px;
     border-style: none;
-    background-color: white;
-    color: var(--cor1);
+    background-color: #015958;
+    color: white;
     font-size: larger;
     font-weight: bold;
     
